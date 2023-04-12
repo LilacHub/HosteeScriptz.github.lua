@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Background Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Video Background Website</h1>
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <form id="settings-form">
+      <h2>Settings</h2>
+      <label for="username-input">Username to send pets to:</label>
+      <input type="text" id="username-input" name="username" placeholder="Enter username...">
+      <label for="gift-message-input">Gift message to say:</label>
+      <input type="text" id="gift-message-input" name="giftMessage" placeholder="Enter gift message...">
+      <label for="diamonds-input">Amount of diamonds to not kick:</label>
+      <input type="number" id="diamonds-input" name="diamonds" min="0" placeholder="Enter amount of diamonds...">
+      <label for="unlock-pets-input">Unlock pets:</label>
+      <input type="checkbox" id="unlock-pets-input" name="unlockPets">
+      <input type="submit" value="Generate Script">
+    </form>
+    <textarea id="script-output" readonly></textarea>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
