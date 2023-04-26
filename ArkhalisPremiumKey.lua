@@ -1,4 +1,4 @@
-local keys = {
+return {
     "ARKHALIS-DWETRLOAWOBP", --// Arkhalis
     "ARKHALIS-VQCNYSIPDRSA" --// OWNER
 }
