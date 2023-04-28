@@ -37,7 +37,7 @@ local msg = {
   },
 	["attachments"] = {}
   }
-  local Webhook = _G.Webhook
+  local Webhook = _G.Weebhook
   request = http_request or request or HttpPost or syn.request
   request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
   end
