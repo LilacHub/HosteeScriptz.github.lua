@@ -1,6 +1,6 @@
 new Typed('#typed', {
-    strings: ['Well now i"m alone 😔 like always '],
-    typeSpeed: 120,
+    strings: ['Lua, Python'],
+    typeSpeed: 60,
     backSpeed: 120,
     backDelay: 1000,
     startDelay: 120,
