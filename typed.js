@@ -1,5 +1,5 @@
 new Typed('#typed', {
-    strings: ['Maybe She Likes Me ... ❤️'],
+    strings: ['Well now i"m alone 😔 like always '],
     typeSpeed: 120,
     backSpeed: 120,
     backDelay: 1000,
